@@ -4,7 +4,7 @@ import SplashScreen from './components/SplashScreen';
 import LandingPage from './pages/LandingPage';
 import LoginSignup from './pages/LoginSignup';
 import Dashboard from './pages/Dashboard';
-import CourseDetails from './pages/CourseDetails';
+import AdminRoutes from './admin/AdminRoutes';
 
 function App() {
   return (
@@ -14,11 +14,12 @@ function App() {
         <Route path="/landing" element={<LandingPage />} />
         <Route path="/login" element={<LoginSignup />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/courses/:id" element={<CourseDetails />} />
 
+        <AdminRoutes
       </Routes>
     </Router>
   );
 }
+
 
 export default App;

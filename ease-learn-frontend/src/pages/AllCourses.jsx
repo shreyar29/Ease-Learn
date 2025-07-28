@@ -1,57 +1,45 @@
-// src/pages/AllCourses.jsx
 import React from 'react';
-import './AllCourses.css'; // We’ll add styles later
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
+import './AllCourses.css'; // Create CSS for styling
 
 const courses = [
   {
     id: 1,
-    title: 'Full Stack Web Development',
-    description: 'Learn HTML, CSS, JavaScript, React, Node.js, MongoDB and more.',
-    image: 'https://source.unsplash.com/400x250/?web,code',
+    title: "Web Development Bootcamp",
+    description: "Learn HTML, CSS, JavaScript and React.",
+    image: "https://via.placeholder.com/300x200",
   },
   {
     id: 2,
-    title: 'Python for Data Science',
-    description: 'Master Python with real-world data analysis projects and ML basics.',
-    image: 'https://source.unsplash.com/400x250/?python,data',
+    title: "Data Science with Python",
+    description: "Pandas, NumPy, Matplotlib and more.",
+    image: "https://via.placeholder.com/300x200",
   },
   {
     id: 3,
-    title: 'UI/UX Design Fundamentals',
-    description: 'Learn wireframing, prototyping, and design principles.',
-    image: 'https://source.unsplash.com/400x250/?design,ui',
-  },
-  {
-    id: 4,
-    title: 'Java Programming Basics',
-    description: 'Strong foundation in Java with hands-on projects.',
-    image: 'https://source.unsplash.com/400x250/?java,code',
+    title: "Machine Learning A-Z",
+    description: "Hands-on ML using Scikit-learn and TensorFlow.",
+    image: "https://via.placeholder.com/300x200",
   },
 ];
 
 const AllCourses = () => {
   return (
-    <>
-      <Navbar />
-      <div className="all-courses-container">
-        <h2 className="all-courses-title">Explore Our Courses</h2>
-        <div className="courses-grid">
-          {courses.map((course) => (
-            <div className="course-card" key={course.id}>
-              <img src={course.image} alt={course.title} className="course-image" />
-              <div className="course-content">
-                <h3>{course.title}</h3>
-                <p>{course.description}</p>
-                <button className="view-button">View Course</button>
-              </div>
-            </div>
-          ))}
-        </div>
+    <div className="courses-container">
+      <h2>All Courses</h2>
+      <div className="course-list">
+        {courses.map((course) => (
+          <div key={course.id} className="course-card">
+            <img src={course.image} alt={course.title} />
+            <h3>{course.title}</h3>
+            <p>{course.description}</p>
+            <Link to={`/courses/${course.id}`}>
+              <button className="view-button">View Course</button>
+            </Link>
+          </div>
+        ))}
       </div>
-      <Footer />
-    </>
+    </div>
   );
 };
 
