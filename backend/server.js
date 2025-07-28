@@ -9,6 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+
 // Test route
 app.get("/", (req, res) => {
   res.send("Ease-Learn Backend is Live 🚀");
@@ -26,9 +27,17 @@ app.use("/api/auth", authRoutes);
 const userRoutes = require("./routes/userRoutes"); // or wherever your protected route is
 app.use("/api/user", userRoutes);
 
+//Admin routes
+const adminRoutes = require('./routes/admin');
+app.use('/api/admin', adminRoutes);
+
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
 
+app.use(cors({
+  origin: 'http://localhost:3000', // or wherever your React app runs
+  credentials: true,
+}));
