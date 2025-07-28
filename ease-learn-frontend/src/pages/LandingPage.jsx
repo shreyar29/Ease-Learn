@@ -1,64 +1,49 @@
 import React from 'react';
-import LandingGuest from './Landing/LandingGuest';
-import LandingUser from './Landing/LandingUser';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import './LandingPage.css';
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
-  const isLoggedIn = false; // Change based on auth logic
-  const user = { name: 'Shreya' }; // Dummy user info
-
   return (
     <div className="landing-container">
-      <Navbar />
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="hero-content">
+          <h1>Welcome to Ease-Learn</h1>
+          <p>Your personalized online learning platform.</p>
+          <Link to="/all-courses">
+            <button className="get-started-btn">Explore Courses</button>
+          </Link>
+        </div>
+      </section>
 
-      {isLoggedIn ? (
-        <LandingUser user={user} />
-      ) : (
-        <>
-          <LandingGuest />
+      {/* Features Section */}
+      <section className="features">
+        <h2>Why Choose Ease-Learn?</h2>
+        <div className="feature-list">
+          <div className="feature">
+            <h3>🎯 Personalized Learning</h3>
+            <p>Learn at your own pace with curated content tailored for you.</p>
+          </div>
+          <div className="feature">
+            <h3>🧠 Expert Instructors</h3>
+            <p>Courses taught by real-world professionals and domain experts.</p>
+          </div>
+          <div className="feature">
+            <h3>📜 Certifications</h3>
+            <p>Earn certificates on completion and showcase your skills.</p>
+          </div>
+        </div>
+      </section>
 
-          {/* Hero Section */}
-          <section className="hero-section">
-            <div className="hero-text">
-              <h1>Welcome to Ease-Learn</h1>
-              <p>
-                Empower your learning journey with technology-driven education.
-                Discover interactive lessons, track your progress, and unlock new skills with ease.
-              </p>
-            </div>
-            <div className="hero-image">
-              <img
-                src="https://images.unsplash.com/photo-1584697964154-06f7f53d2d0d?auto=format&fit=crop&w=600&q=80"
-                alt="Learning Illustration"
-              />
-            </div>
-          </section>
-
-          {/* Features Section */}
-          <section className="features-section">
-            <div className="feature-card">
-              <h3>Interactive Courses</h3>
-              <p>Engaging content with quizzes, videos, and projects to help you learn better.</p>
-            </div>
-            <div className="feature-card">
-              <h3>Progress Tracking</h3>
-              <p>Monitor your learning journey and celebrate every milestone you achieve.</p>
-            </div>
-            <div className="feature-card">
-              <h3>Expert Instructors</h3>
-              <p>Learn from top educators and professionals from around the world.</p>
-            </div>
-            <div className="feature-card">
-              <h3>Community Support</h3>
-              <p>Join a thriving community of learners and get your questions answered fast.</p>
-            </div>
-          </section>
-        </>
-      )}
-
-      <Footer />
+      {/* How It Works */}
+      <section className="how-it-works">
+        <h2>How It Works</h2>
+        <ol>
+          <li>Sign up or log in to your account</li>
+          <li>Browse and enroll in available courses</li>
+          <li>Track your progress and download certificates</li>
+        </ol>
+      </section>
     </div>
   );
 };

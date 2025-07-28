@@ -4,6 +4,7 @@ import SplashScreen from './components/SplashScreen';
 import LandingPage from './pages/LandingPage';
 import LoginSignup from './pages/LoginSignup';
 import Dashboard from './pages/Dashboard';
+import Profile from './pages/Profile';
 import AdminLogin from './admin/pages/AdminLogin';
 import AdminDashboard from './admin/pages/AdminDashboard';
 import AddCourse from './admin/pages/AddCourse';
@@ -21,6 +22,9 @@ function App() {
         <Route path="/landing" element={<LandingPage />} />
         <Route path="/login" element={<LoginSignup />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/profile" element={<Profile />} />
+        
+        {/* Admin Routes */}
         <Route path="/admin/login" element={<AdminLogin />} />
       <Route path="/admin/dashboard" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
       <Route path="/admin/add-course" element={<ProtectedRoute><AddCourse /></ProtectedRoute>} />

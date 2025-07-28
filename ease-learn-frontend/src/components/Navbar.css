@@ -1,0 +1,67 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar container */
+.navbar {
+  background-color: #e0f2fe; /* Light blue background */
+  color: #0c4a6e; /* Deep blue text */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-bottom: 2px solid #bae6fd; /* Subtle border */
+}
+
+/* Logo styling */
+.navbar-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #0284c7; /* Medium blue */
+}
+
+/* Nav links container */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Link styles */
+.navbar-links li a {
+  text-decoration: none;
+  color: #0c4a6e;
+  font-size: 1rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.navbar-links li a:hover {
+  background-color: #bae6fd; /* Lightest blue */
+  color: #0284c7;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+    width: 100%;
+  }
+}

@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const jwt = require('jsonwebtoken');
+const verifyAdmin = require('../middleware/verifyAdmin');
 
 // Admin credentials (In real apps, store hashed in DB)
 const ADMIN_EMAIL = 'admin@site.com';

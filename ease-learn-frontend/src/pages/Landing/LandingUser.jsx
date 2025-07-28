@@ -1,5 +1,6 @@
 // src/pages/Landing/LandingUser.jsx
 import React from 'react';
+import './LandingUser.css'; // Assuming you have a CSS file for styling
 
 const LandingUser = ({ user }) => {
   return (

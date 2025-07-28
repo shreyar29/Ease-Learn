@@ -1,0 +1,55 @@
+/* General container */
+.container {
+  background-color: #f0f9ff; /* very light blue */
+  padding: 5rem 2rem;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: 5rem auto;
+  box-shadow: 0 4px 20px rgba(0, 119, 182, 0.1);
+}
+
+/* Heading */
+.container h1 {
+  font-size: 2.5rem;
+  color: #0284c7; /* vibrant blue */
+  margin-bottom: 1rem;
+}
+
+/* Subheading */
+.container .lead {
+  font-size: 1.25rem;
+  color: #0c4a6e;
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Primary button (Login) */
+.btn-primary {
+  background-color: #0284c7;
+  border: none;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0369a1;
+}
+
+/* Outline button (Signup) */
+.btn-outline-primary {
+  border: 2px solid #0284c7;
+  color: #0284c7;
+  background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  border-color: #0369a1;
+}
