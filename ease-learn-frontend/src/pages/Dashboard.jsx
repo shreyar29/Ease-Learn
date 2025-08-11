@@ -1,31 +1,28 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './Dashboard.css';
+import logo from '../assets/logo.png'; // Assuming you have a logo image in assets folder
 
 const Dashboard = () => {
-  const user = { name: 'Shreya' };
-
   return (
-    <>
-      <nav className="dashboard-navbar">
-        <div className="logo">Ease-Learn</div>
+    <div className="dashboard-wrapper">
+      <nav className="navbar">
+        <div className="logo">
+          <img src={ logo } alt="logo" />
+          <span>Ease-Learn</span>
+        </div>
         <ul className="nav-links">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/profile">Profile</Link></li>
+          <li>Home</li>
+          <li>Courses</li>
+          <li>About</li>
+          <li>Contact Us</li>
+          <li>Profile</li>
         </ul>
       </nav>
-
-      <div className="dashboard-container">
-        <h1>Welcome back, {user.name} 👋</h1>
-        <p>Ready to continue your learning journey?</p>
-
-        <div className="dashboard-sections">
-          <div className="card">📚 My Courses</div>
-          <div className="card">📈 Progress</div>
-          <div className="card">📰 Announcements</div>
-        </div>
+      <div className="dashboard-content">
+        <h2>Welcome to your dashboard!</h2>
+        <p>This is a secure area accessible only to logged-in users.</p>
       </div>
-    </>
+    </div>
   );
 };
 
